@@ -1,0 +1,385 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaf3ff;
+    color: #122236;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #0d47a1;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+header h2 {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+nav {
+    background-color: #1976d2;
+    border-radius: 30px;
+    margin: 0 auto 20px auto;
+    max-width: 1100px;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 5px 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+nav ul li a:hover {
+    background-color: #2196f3;
+    transform: translateY(-1px);
+}
+
+nav ul li a:visited {
+    color: #e3f2fd;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.panel,
+.seccion-form,
+.seccion-tabla {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    border: 2px solid #bbdefb;
+    box-shadow: 0 4px 6px rgba(13, 71, 161, 0.08);
+}
+
+.panel p {
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #0d47a1;
+}
+
+.seccion-form .formulario,
+.modal-contenido .formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.fila-form label,
+.campo label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #0d47a1;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.fila-form input,
+.fila-form textarea,
+.campo input,
+.campo select {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid #90caf9;
+    font-size: 0.9rem;
+    background-color: #f5f9ff;
+}
+
+.fila-form textarea {
+    resize: vertical;
+}
+
+.fila-form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+}
+
+.btn-primario {
+    margin-top: 5px;
+    align-self: flex-start;
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: none;
+    background-color: #1565c0;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-primario:hover {
+    background-color: #1e88e5;
+    transform: translateY(-1px);
+}
+
+.mensajes-form {
+    font-size: 0.85rem;
+}
+
+.mensaje {
+    display: none;
+    margin-top: 4px;
+}
+
+.mensaje.exito {
+    color: #1b5e20;
+}
+
+.mensaje.error {
+    color: #b71c1c;
+}
+
+.formulario:invalid:focus-within .mensaje.error {
+    display: block;
+}
+
+.formulario:valid .mensaje.exito {
+    display: block;
+}
+
+.formulario:valid .mensaje.error {
+    display: false;
+}
+
+.seccion-tabla .tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabla-datos {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.tabla-datos thead {
+    background-color: #e3f2fd;
+}
+
+.tabla-datos th,
+.tabla-datos td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #dbe4f5;
+    text-align: left;
+}
+
+.tabla-datos th {
+    color: #0d47a1;
+}
+
+.tabla-datos tbody tr:hover {
+    background-color: #f1f6ff;
+}
+
+.acciones {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.btn-accion {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 18px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    background-color: #1976d2;
+    color: white;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-accion:hover {
+    background-color: #1e88e5;
+    transform: translateY(-1px);
+}
+
+.btn-eliminar {
+    background-color: #ef5350;
+}
+
+.btn-eliminar:hover {
+    background-color: #e53935;
+}
+
+.estado-celda {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.estado-toggle {
+    display: none;
+}
+
+.switch-estado {
+    width: 40px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #e53935;
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background-color 0.25s;
+}
+
+.switch-estado::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.25s;
+}
+
+.estado-toggle:checked + .switch-estado {
+    background-color: #2e7d32;
+}
+
+.estado-toggle:checked + .switch-estado::before {
+    transform: translateX(20px);
+}
+
+.modal-detalle {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(13, 71, 161, 0.45);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    z-index: 1000;
+}
+
+.modal-detalle:target {
+    display: flex;
+}
+
+.modal-contenido {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 650px;
+    width: 100%;
+    border: 2px solid #bbdefb;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.acciones-modal {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.btn-secundario {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background-color: #e3f2fd;
+    color: #0d47a1;
+    border: 1px solid #bbdefb;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-secundario:hover {
+    background-color: #bbdefb;
+    transform: translateY(-1px);
+}
+
+
+.bienvenida,
+.seccion-form,
+.seccion-tabla {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: mostrar 0.6s ease-out forwards;
+}
+
+@keyframes mostrar {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        border-radius: 0;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header h2 {
+        font-size: 1rem;
+    }
+}
+
+footer {
+    background-color: #1976d2;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
