@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar evento - Planificador Académico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Planificador Académico</h1>
+        <h2>Registro de eventos</h2>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Panel principal</a></li>
+            <li><a href="tarea.html">Ingresar tarea</a></li>
+            <li><a href="evento.html">Ingresar evento</a></li>
+            <li><a href="visualizacion.html">Visualizar</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="seccion-form visible">
+            <h3>Ingresar evento</h3>
+            <form class="formulario" action="#" method="post">
+                <div class="fila-form">
+                    <label for="titulo-evento">Título del evento</label>
+                    <input type="text" id="titulo-evento" name="titulo-evento" required>
+                </div>
+
+                <div class="fila-form">
+                    <label for="descripcion-evento">Descripción</label>
+                    <textarea id="descripcion-evento" name="descripcion-evento" rows="3" required></textarea>
+                </div>
+
+                <div class="fila-form-grid">
+                    <div class="campo">
+                        <label for="fecha-evento">Fecha</label>
+                        <input type="date" id="fecha-evento" name="fecha-evento" required>
+                    </div>
+                    <div class="campo">
+                        <label for="hora-evento">Hora</label>
+                        <input type="time" id="hora-evento" name="hora-evento" required>
+                    </div>
+                    <div class="campo">
+                        <label for="lugar-evento">Lugar</label>
+                        <input type="text" id="lugar-evento" name="lugar-evento" required>
+                    </div>
+                </div>
+
+                <div class="mensajes-form">
+                    <p class="mensaje exito">Evento registrado con éxito.</p>
+                    <p class="mensaje error">Por favor, completa todos los campos correctamente.</p>
+                </div>
+
+                <button type="submit" class="btn-primario">Guardar evento</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Planificador Académico Semanal</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar tarea - Planificador Académico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Planificador Académico</h1>
+        <h2>Registro de tareas</h2>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Panel principal</a></li>
+            <li><a href="tarea.html">Ingresar tarea</a></li>
+            <li><a href="evento.html">Ingresar evento</a></li>
+            <li><a href="visualizacion.html">Visualizar</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="seccion-form visible">
+            <h3>Ingresar tarea</h3>
+            <form class="formulario" action="#" method="post">
+                <div class="fila-form">
+                    <label for="titulo-tarea">Título de la tarea</label>
+                    <input type="text" id="titulo-tarea" name="titulo-tarea" required>
+                </div>
+
+                <div class="fila-form">
+                    <label for="descripcion-tarea">Descripción</label>
+                    <textarea id="descripcion-tarea" name="descripcion-tarea" rows="3" required></textarea>
+                </div>
+
+                <div class="fila-form-grid">
+                    <div class="campo">
+                        <label for="fecha-tarea">Fecha</label>
+                        <input type="date" id="fecha-tarea" name="fecha-tarea" required>
+                    </div>
+                    <div class="campo">
+                        <label for="hora-tarea">Hora</label>
+                        <input type="time" id="hora-tarea" name="hora-tarea" required>
+                    </div>
+                </div>
+
+                <div class="fila-form-grid">
+                    <div class="campo">
+                        <label for="materia-tarea">Materia</label>
+                        <input type="text" id="materia-tarea" name="materia-tarea" required>
+                    </div>
+                    <div class="campo">
+                        <label for="docente">Docente</label>
+                        <input type="text" id="docente" name="docente" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primario">Guardar tarea</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Planificador Académico Semanal</p>
+    </footer>
+</body>
+</html>
