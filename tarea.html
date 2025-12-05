@@ -1,69 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingresar tarea - Planificador Académico</title>
-    <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+    <body>
     <header>
         <h1>Planificador Académico</h1>
         <h2>Registro de tareas</h2>
     </header>
-
     <nav>
         <ul>
-            <li><a href="index.html">Panel principal</a></li>
-            <li><a href="tarea.html">Ingresar tarea</a></li>
-            <li><a href="evento.html">Ingresar evento</a></li>
-            <li><a href="visualizacion.html">Visualizar</a></li>
+        <li><a href="index.html">Panel principal</a></li>
+        <li><a href="tarea.html">Ingresar tarea</a></li>
+        <li><a href="evento.html">Ingresar evento</a></li>
+        <li><a href="visualizacion.html">Visualizar</a></li>
         </ul>
     </nav>
-
     <main>
         <section class="seccion-form visible">
-            <h3>Ingresar tarea</h3>
-            <form class="formulario" action="#" method="post">
-                <div class="fila-form">
-                    <label for="titulo-tarea">Título de la tarea</label>
-                    <input type="text" id="titulo-tarea" name="titulo-tarea" required>
-                </div>
-
-                <div class="fila-form">
-                    <label for="descripcion-tarea">Descripción</label>
-                    <textarea id="descripcion-tarea" name="descripcion-tarea" rows="3" required></textarea>
-                </div>
-
-                <div class="fila-form-grid">
-                    <div class="campo">
-                        <label for="fecha-tarea">Fecha</label>
-                        <input type="date" id="fecha-tarea" name="fecha-tarea" required>
-                    </div>
-                    <div class="campo">
-                        <label for="hora-tarea">Hora</label>
-                        <input type="time" id="hora-tarea" name="hora-tarea" required>
-                    </div>
-                </div>
-
-                <div class="fila-form-grid">
-                    <div class="campo">
-                        <label for="materia-tarea">Materia</label>
-                        <input type="text" id="materia-tarea" name="materia-tarea" required>
-                    </div>
-                    <div class="campo">
-                        <label for="docente">Docente</label>
-                        <input type="text" id="docente" name="docente" required>
-                    </div>
-                </div>
-
-                <button type="submit" class="btn-primario">Guardar tarea</button>
-            </form>
+        <h3>Ingresar tarea</h3>
+        <form id="taskForm" class="formulario" action="#" method="post">
+            <div class="fila-form">
+            <label for="titulo-tarea">Título de la tarea</label>
+            <input type="text" id="titulo-tarea" name="title" required>
+            </div>
+            <div class="fila-form">
+            <label for="descripcion-tarea">Descripción</label>
+            <textarea id="descripcion-tarea" name="description" rows="3" required></textarea>
+            </div>
+            <div class="fila-form-grid">
+            <div class="campo">
+                <label for="fecha-tarea">Fecha</label>
+                <input type="date" id="fecha-tarea" name="date" required>
+            </div>
+            <div class="campo">
+                <label for="hora-tarea">Hora</label>
+                <input type="time" id="hora-tarea" name="time" required>
+            </div>
+            </div>
+            <div class="fila-form-grid">
+            <div class="campo">
+                <label for="materia-tarea">Materia</label>
+                <input type="text" id="materia-tarea" name="subject" required>
+            </div>
+            <div class="campo">
+                <label for="docente">Docente</label>
+                <input type="text" id="docente" name="teacher" required>
+            </div>
+            </div>
+            <button type="submit" class="btn-primario">Guardar tarea</button>
+        </form>
+        </section>
+        <section style="margin-top:24px;">
+        <h3>Tareas guardadas</h3>
+        <table id="tasksTable" style="width:100%;border-collapse:collapse;">
+            <thead>
+            <tr style="background:#f5f5f5;">
+                <th style="padding:8px;border:1px solid #ddd">Título</th>
+                <th style="padding:8px;border:1px solid #ddd">Fecha</th>
+                <th style="padding:8px;border:1px solid #ddd">Hora</th>
+                <th style="padding:8px;border:1px solid #ddd">Materia</th>
+                <th style="padding:8px;border:1px solid #ddd">Docente</th>
+                <th style="padding:8px;border:1px solid #ddd">Acciones</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
         </section>
     </main>
-
     <footer>
-        <p>© 2025 Planificador Académico Semanal</p>
+        <p>©️ 2025 Planificador Académico Semanal</p>
     </footer>
-</body>
+    <script src="js/main.js"></script>
+    </body>
 </html>
