@@ -1,12 +1,13 @@
+VISUALIZACION.HTML
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visualizar tareas y eventos - Planificador Académico</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Visualizar tareas y eventos - Planificador Académico</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
     <header>
         <h1>Planificador Académico</h1>
         <h2>Visualización de tareas y eventos</h2>
@@ -21,30 +22,29 @@
     </nav>
     <main>
         <section id="lista-tareas" class="seccion-tabla visible">
-            <h3>Visualizar tareas</h3>
-            <div class="tabla-contenedor">
-                <table id="tasksTable" class="tabla-datos">
-                    <thead>
-                        <tr>
-                            <th>Título</th><th>Fecha</th><th>Hora</th><th>Materia</th><th>Docente</th><th>Estado</th><th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-            </div>
+        <h3>Visualizar tareas</h3>
+        <div class="tabla-contenedor">
+            <table id="tasksTable" class="tabla-datos">
+            <thead>
+                <tr>
+                <th>Título</th><th>Fecha</th><th>Hora</th><th>Materia</th><th>Docente</th><th>Estado</th><th>Acciones</th>
+                </tr>
+            </thead>
+            </table>
+        </div>
         </section>
         <section id="lista-eventos" class="seccion-tabla visible" style="margin-top:24px;">
-            <h3>Visualizar eventos</h3>
-            <div class="tabla-contenedor">
-                <table id="eventsTable" class="tabla-datos">
-                    <thead>
-                        <tr>
-                            <th>Título</th><th>Fecha</th><th>Hora</th><th>Lugar</th><th>Estado</th><th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-            </div>
+        <h3>Visualizar eventos</h3>
+        <div class="tabla-contenedor">
+            <table id="eventsTable" class="tabla-datos">
+            <thead>
+                <tr>
+                <th>Título</th><th>Fecha</th><th>Hora</th><th>Lugar</th><th>Estado</th><th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+            </table>
+        </div>
         </section>
         <div id="detailModal" style="display:none;"></div>
     </main>
@@ -52,5 +52,5 @@
         <p>© 2025 Planificador Académico Semanal</p>
     </footer>
     <script src="js/main.js"></script>
-</body>
+    </body>
 </html>
